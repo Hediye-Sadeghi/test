@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import {Header} from '../component/layout/header/Header'
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Navbar} from '../component/layout/header/Navbar'
 import { Link, Outlet } from 'react-router-dom'
 
 const navigation = [
@@ -47,7 +46,7 @@ setMobileMenuOpen(true)
       </div>
       <div className="px-6 pt-6 lg:px-8">
 
-       <Header navigation={navigation} setMobileMenuOpen={openMobileMenu}/>
+       <Navbar navigation={navigation} setMobileMenuOpen={openMobileMenu}/>
 
         <Dialog as="div" open={mobileMenuOpen} onClose={openMobileMenu}>
           <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">

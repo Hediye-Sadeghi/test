@@ -3,6 +3,7 @@ import Angular from "../assets/images/angular.png";
 import Js from "../assets/images/Js.png";
 import React1 from "../assets/images/React-js.png";
 import React2 from "../assets/images/react_native.png";
+import {Button} from "./commen/Button"
 
 const products = [
   {
@@ -64,6 +65,7 @@ export default function Example() {
           ))}
         </div>
       </div>
+      <Button>نمایش بیشتر</Button>
     </div>
   );
 }

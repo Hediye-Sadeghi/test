@@ -1,7 +1,7 @@
 import React from "react";
 import { Bars3Icon} from "@heroicons/react/24/outline";
 
-export const Header= ({setMobileMenuOpen,navigation})=> {
+export const Navbar= ({setMobileMenuOpen,navigation})=> {
   return (
     <nav className="flex items-center justify-between" aria-label="Global">
       <div className="flex lg:flex-1">
