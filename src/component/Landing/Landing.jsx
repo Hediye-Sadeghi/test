@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './../Header';
 import Card from './../Card';
 import Courses from './../Courses';
 import SortCard from './../SortCard';
@@ -12,6 +13,7 @@ import Opinion from './../Opinion';
 export default function Landing() {
     return (
         <div>
+            <Header/>
             <Card />
             <Courses />
             <SortCard />

@@ -5,12 +5,7 @@ import { Navbar } from '../component/layout/header/Navbar'
 import { Link, Outlet } from 'react-router-dom'
 import Typewriter from "typewriter-effect";
 
-const navigation = [
-  { name: "خانه", href: "/" },
-  { name: "دوره های آموزشی", href: "/coursesPage" },
-  { name: "اخبار و مقالات", href: "/news" },
-  { name: "تماس با ما", href: "/about/*" },
-];
+
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,7 +42,7 @@ export default function Example() {
       </div>
       <div className="px-6 pt-6 lg:px-8">
 
-        <Navbar navigation={navigation} setMobileMenuOpen={openMobileMenu} />
+        <Navbar setMobileMenuOpen={openMobileMenu} />
 
         <Dialog as="div" open={mobileMenuOpen} onClose={openMobileMenu}>
           <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
@@ -72,7 +67,7 @@ export default function Example() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-blue-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {/* {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -80,15 +75,15 @@ export default function Example() {
                     >
                       {item.name}
                     </a>
-                  ))}
+                  ))} */}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
+                  {/* <Link
+                    to="/login"
                     className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-blue-900 hover:bg-blue-400/10"
                   >
                     ثبت نام
-                  </a>
+                  </Link> */}
                 </div>
               </div>
             </div>
