@@ -13,7 +13,7 @@ import Dashboard from './component/Dashboard';
 import SignIn from './component/SignIn';
 import Login from './component/Login';
 import Setting from './component/Setting';
-import Landing from './component/Landing/Landing';
+import Landing from './component/landing/Landing';
 
 
 let routes = [
