@@ -6,7 +6,7 @@ import MainCard from './component/MainCard';
 import SortCard from './component/SortCard';
 import Team from './component/Team';
 import StudentOpinion from './component/StudentOpinion'
-import Footer from './component/Footer/Footer'
+import Footer from './component/layout/Footer/Footer'
 import Opinion from './component/Opinion';
 
 

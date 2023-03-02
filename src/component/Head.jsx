@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import Header from '../component/layout/header/Header'
 
 const navigation = [
   { name: "خانه", href: "#" },
@@ -40,7 +41,9 @@ export default function Example() {
         </svg>
       </div>
       <div className="px-6 pt-6 lg:px-8">
-       
+
+       <Header />
+
         <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
             <div className="flex items-center justify-between">
