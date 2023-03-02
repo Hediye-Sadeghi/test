@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+/* @font-face {
+  font-family: estedad;
+  src: url("./Fonts/Estedad-v5.0-Fontjo.com/Estedad[wght\,kshd].ttf") format("truetype");
+} */
+=======
 
+>>>>>>> b4ad5b12942724f63cfa5e9c52fc109a25e64ff9
 
 body {
   margin: 0;

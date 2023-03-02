@@ -1,5 +1,6 @@
 import React from "react";
 import { Bars3Icon} from "@heroicons/react/24/outline";
+import { Link, Outlet } from 'react-router-dom' 
 
 export const Navbar= ({setMobileMenuOpen,navigation})=> {
   return (
@@ -26,13 +27,13 @@ export const Navbar= ({setMobileMenuOpen,navigation})=> {
       </div>
       <div className="hidden lg:flex lg:gap-x-12">
         {navigation.map((item) => (
-          <a
+          <Link
             key={item.name}
-            href={item.href}
+            to={item.href}
             className="text-sm font-semibold leading-6 text-blue-900 hover:text-blue-500"
           >
             {item.name}
-          </a>
+          </Link>
         ))}
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:justify-end">
