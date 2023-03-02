@@ -1,5 +1,6 @@
 
-import Courses from './component/Courses';
+
+import CoursesPage from './component/CoursesPage';
 import MainCourse from './component/MainCourse';
 
 import News from './component/News';
@@ -12,12 +13,13 @@ import Dashboard from './component/Dashboard';
 import SignIn from './component/SignIn';
 import Login from './component/Login';
 import Setting from './component/Setting';
+import Landing from './component/Landing/Landing';
 
 
 let routes = [
-    { path: '/', element: '' },
+    { path: '/', element: <Landing/> },
 
-    { path: '/courses', element: <Courses /> },
+    { path: '/coursesPage', element: <CoursesPage /> },
     { path: '/course/:courseID', element: <MainCourse /> },
 
     { path: '/news', element: <News /> },

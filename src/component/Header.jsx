@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { Navbar} from '../component/layout/header/Navbar'
+import { Navbar } from '../component/layout/header/Navbar'
 import { Link, Outlet } from 'react-router-dom'
+import Typewriter from "typewriter-effect";
 
 const navigation = [
-  { name: "خانه", href: "#" },
-  { name: "دوره های آموزشی", href: "#" },
-  { name: "اخبار و مقالات", href: "#" },
-  { name: "تماس با ما", href: "#" },
+  { name: "خانه", href: "/" },
+  { name: "دوره های آموزشی", href: "/coursesPage" },
+  { name: "اخبار و مقالات", href: "/news" },
+  { name: "تماس با ما", href: "/about/*" },
 ];
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-const openMobileMenu=()=>{
-setMobileMenuOpen(true)
-}
+  const openMobileMenu = () => {
+    setMobileMenuOpen(true)
+  }
   return (
     <div className="isolate bg-white">
-    
+
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -46,7 +47,7 @@ setMobileMenuOpen(true)
       </div>
       <div className="px-6 pt-6 lg:px-8">
 
-       <Navbar navigation={navigation} setMobileMenuOpen={openMobileMenu}/>
+        <Navbar navigation={navigation} setMobileMenuOpen={openMobileMenu} />
 
         <Dialog as="div" open={mobileMenuOpen} onClose={openMobileMenu}>
           <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
@@ -99,7 +100,21 @@ setMobileMenuOpen(true)
           <div className="mx-auto max-w-2xl pb-19 pt-32 sm:pt-28 sm:pb-19 lg:pt-30 lg:pb-19">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-blue-900 sm:text-6xl">
-                آکادمی برنامه نویسی بحر
+                <Typewriter
+                  onInit={(typeWriter) => {
+                    typeWriter
+                      .typeString("آکادمی برنامه نویسی بحر")
+                      .start()
+                      .pauseFor(2000)
+                      .deleteAll()
+
+                  }}
+
+                  options={{
+                    loop: true
+                  }}
+                />
+
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم

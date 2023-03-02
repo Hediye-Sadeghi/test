@@ -16,15 +16,11 @@ function App() {
 
   let router = useRoutes(routes)
   return (
-    <div className="Container m-2">
+    <div className="Container">
       {router}
       <Header />
-      <Card />
-      <Courses />
-      <SortCard />
-      <Team />
-      <StudentOpinion />
-      <Opinion />
+      {router}
+      
       <Footer />
     </div>
   );
