@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import Header from '../component/layout/header/Header'
+import {Header} from '../component/layout/header/Header'
 
 const navigation = [
   { name: "خانه", href: "#" },
@@ -12,7 +12,9 @@ const navigation = [
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+const openMobileMenu=()=>{
+setMobileMenuOpen(true)
+}
   return (
     <div className="isolate bg-white">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -42,9 +44,9 @@ export default function Example() {
       </div>
       <div className="px-6 pt-6 lg:px-8">
 
-       <Header />
+       <Header navigation={navigation} setMobileMenuOpen={openMobileMenu}/>
 
-        <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog as="div" open={mobileMenuOpen} onClose={openMobileMenu}>
           <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
