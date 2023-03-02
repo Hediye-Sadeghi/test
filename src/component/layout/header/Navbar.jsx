@@ -2,8 +2,13 @@ import React from "react";
 import { Bars3Icon} from "@heroicons/react/24/outline";
 import { Link, Outlet } from 'react-router-dom' 
 
-
-export const Navbar= ({setMobileMenuOpen,navigation})=> {
+const navigation = [
+  { name: "خانه", href: "/" },
+  { name: "دوره های آموزشی", href: "/coursesPage" },
+  { name: "اخبار و مقالات", href: "/news" },
+  { name: "تماس با ما", href: "/about/*" },
+];
+export const Navbar= ({setMobileMenuOpen})=> {
   
   return (
     <nav className="flex items-center justify-between" aria-label="Global">
@@ -39,12 +44,12 @@ export const Navbar= ({setMobileMenuOpen,navigation})=> {
         ))}
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a
-          href="#"
+        <Link
+          to="/login"
           className="text-sm font-semibold leading-6 text-blue-900 hover:text-blue-500"
         >
           ثبت نام <span aria-hidden="true">&rarr;</span>
-        </a>
+        </Link>
       </div>
     </nav>
   );
