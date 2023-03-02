@@ -10,7 +10,7 @@ const products = [
     name: "Angular",
     href: "#",
     price: "250000 تومان",
-    imageSrc: { Angular },
+    imageSrc: Angular ,
     imageAlt: "",
   },
   {
@@ -18,7 +18,7 @@ const products = [
     name: "Js",
     href: "#",
     price: "320000 تومان",
-    imageSrc: { Js },
+    imageSrc:  Js ,
     imageAlt: "",
   },
   {
@@ -26,7 +26,7 @@ const products = [
     name: "React1",
     href: "#",
     price: "410000 تومان",
-    imageSrc: { React1 },
+    imageSrc:  React1 ,
     imageAlt: "",
   },
   {
@@ -34,7 +34,7 @@ const products = [
     name: "React2",
     href: "#",
     price: "380000 تومان",
-    imageSrc: { React2 },
+    imageSrc:  React2 ,
     imageAlt: "",
   },
 ];

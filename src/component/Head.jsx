@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import {Header} from '../component/layout/header/Header'
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, Outlet } from 'react-router-dom'
 
@@ -12,7 +14,9 @@ const navigation = [
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+const openMobileMenu=()=>{
+setMobileMenuOpen(true)
+}
   return (
     <div className="isolate bg-white">
     
@@ -42,8 +46,10 @@ export default function Example() {
         </svg>
       </div>
       <div className="px-6 pt-6 lg:px-8">
-       
-        <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+
+       <Header navigation={navigation} setMobileMenuOpen={openMobileMenu}/>
+
+        <Dialog as="div" open={mobileMenuOpen} onClose={openMobileMenu}>
           <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">

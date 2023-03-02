@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: estedad;
-  src: url("./Fonts/Estedad-v5.0-Fontjo.com/Estedad[wght\,kshd].ttf") format("truetype");
-}
+
 
 body {
   margin: 0;
-  font-family:estedad;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   direction: rtl;
