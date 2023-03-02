@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+// import { XMarkIcon } from "@heroicons/react/24/outline";
 import {Header} from '../component/layout/header/Header'
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom' 
 
 const navigation = [
-  { name: "خانه", href: "#" },
-  { name: "دوره های آموزشی", href: "#" },
-  { name: "اخبار و مقالات", href: "#" },
-  { name: "تماس با ما", href: "#" },
+  { name: "خانه", href: "/" },
+  { name: "دوره های آموزشی", href: "/courses" },
+  { name: "اخبار و مقالات", href: "/news" },
+  { name: "تماس با ما", href: "/about/*" },
 ];
 
 export default function Example() {
@@ -73,13 +73,13 @@ setMobileMenuOpen(true)
               <div className="-my-6 divide-y divide-blue-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-blue-900 hover:bg-blue-400/10"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">

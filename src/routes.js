@@ -1,8 +1,21 @@
 
+import Courses from './component/Courses';
+import MainCourse from './component/MainCourse';
+
+import News from './component/News';
+import MainNews from './component/MainNews';
+
+import About from './component/About';
+import Articles from './component/Articles';
+import MainArticle from './component/MainArticle';
+import Dashboard from './component/Dashboard';
+import SignIn from './component/SignIn';
+import Login from './component/Login';
+import Setting from './component/Setting';
 
 
 let routes = [
-    { path: '/', element: <Landing /> },
+    { path: '/', element: '' },
 
     { path: '/courses', element: <Courses /> },
     { path: '/course/:courseID', element: <MainCourse /> },
@@ -10,7 +23,7 @@ let routes = [
     { path: '/news', element: <News /> },
     { path: '/news/:newsID', element: <MainNews /> },
 
-    { path: '/articles', element: <Articles /> },
+    { path: '/articles', element: <Articles /> }, 
     { path: '/article/:articleID', element: <MainArticle /> },
     
 
@@ -21,9 +34,8 @@ let routes = [
         ]
     },
     { path: '/login', element: <Login /> },
-    { path: '/register', element: <Register /> },
-    { path: '/panel', element: <Panel /> },
-    { path: '/dashboard', element: <Dashboard /> },
+    { path: '/register', element: <SignIn /> },
+
 ]
 
 export default routes
