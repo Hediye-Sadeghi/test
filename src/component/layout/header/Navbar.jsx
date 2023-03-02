@@ -2,7 +2,7 @@ import React from "react";
 import { Bars3Icon} from "@heroicons/react/24/outline";
 import { Link, Outlet } from 'react-router-dom' 
 
-export const Header= ({setMobileMenuOpen,navigation})=> {
+export const Navbar= ({setMobileMenuOpen,navigation})=> {
   return (
     <nav className="flex items-center justify-between" aria-label="Global">
       <div className="flex lg:flex-1">

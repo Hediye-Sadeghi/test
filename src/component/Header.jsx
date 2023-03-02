@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
-// import { XMarkIcon } from "@heroicons/react/24/outline";
-import {Header} from '../component/layout/header/Header'
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link, Outlet } from 'react-router-dom' 
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Navbar} from '../component/layout/header/Navbar'
+import { Link, Outlet } from 'react-router-dom'
 
 const navigation = [
-  { name: "خانه", href: "/" },
-  { name: "دوره های آموزشی", href: "/courses" },
-  { name: "اخبار و مقالات", href: "/news" },
-  { name: "تماس با ما", href: "/about/*" },
+  { name: "خانه", href: "#" },
+  { name: "دوره های آموزشی", href: "#" },
+  { name: "اخبار و مقالات", href: "#" },
+  { name: "تماس با ما", href: "#" },
 ];
 
 export default function Example() {
@@ -47,7 +46,7 @@ setMobileMenuOpen(true)
       </div>
       <div className="px-6 pt-6 lg:px-8">
 
-       <Header navigation={navigation} setMobileMenuOpen={openMobileMenu}/>
+       <Navbar navigation={navigation} setMobileMenuOpen={openMobileMenu}/>
 
         <Dialog as="div" open={mobileMenuOpen} onClose={openMobileMenu}>
           <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
@@ -73,13 +72,13 @@ setMobileMenuOpen(true)
               <div className="-my-6 divide-y divide-blue-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <Link
+                    <a
                       key={item.name}
-                      to={item.href}
+                      href={item.href}
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-blue-900 hover:bg-blue-400/10"
                     >
                       {item.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
                 <div className="py-6">
