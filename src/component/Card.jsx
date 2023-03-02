@@ -1,10 +1,12 @@
 import React from "react"
+import LandingCounter from './LandingCounter';
+
 
 const stats = [
-    { id: 1, name: 'تعداد دانشجو', value: '1542' },
-    { id: 2, name: 'تعداد استاد', value: '57' },
-    { id: 3, name: 'تعداد دوره', value: '218' },
-    { id: 4, name: 'تعداد دوره فعال', value: '87' },
+    { id: 1, name: 'تعداد دانشجو', value: 342 },
+    { id: 2, name: 'تعداد استاد', value: 57 },
+    { id: 3, name: 'تعداد دوره', value: 218 },
+    { id: 4, name: 'تعداد دوره فعال', value: 87 },
 
   ]
   
@@ -17,7 +19,7 @@ const stats = [
               <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
                 <dt className="text-base leading-7 text-blue-600">{stat.name}</dt>
                 <dd className="order-first text-sm tracking-tight text-blue-900 sm:text-4xl">
-                  {stat.value}
+                  <LandingCounter count={stat.value} />                  
                 </dd>
               </div>
             ))}

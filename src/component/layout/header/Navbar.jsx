@@ -2,14 +2,16 @@ import React from "react";
 import { Bars3Icon} from "@heroicons/react/24/outline";
 import { Link, Outlet } from 'react-router-dom' 
 
+
 export const Navbar= ({setMobileMenuOpen,navigation})=> {
+  
   return (
     <nav className="flex items-center justify-between" aria-label="Global">
       <div className="flex lg:flex-1">
         <a href="#" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
           <img
-            className="h-8"
+            className="h-8" 
             src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
             alt=""
           />

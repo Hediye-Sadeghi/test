@@ -19,12 +19,8 @@ function App() {
     <div className="Container">
       {router}
       <Header />
-      <Card />
-      <Courses />
-      <SortCard />
-      <Team />
-      <StudentOpinion />
-      <Opinion />
+      {router}
+      
       <Footer />
     </div>
   );
