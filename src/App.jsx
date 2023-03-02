@@ -2,8 +2,8 @@ import React from 'react';
 import { useRoutes } from 'react-router-dom'
 import './App.css';
 import Card from './component/Card';
-import Head from './component/Head';
-import MainCard from './component/MainCard';
+import Header from './component/Header';
+import Courses from './component/Courses';
 import SortCard from './component/SortCard';
 import Team from './component/Team';
 import StudentOpinion from './component/StudentOpinion'
@@ -18,9 +18,9 @@ function App() {
   return (
     <div className="Container m-2">
       {router}
-      <Head />
+      <Header />
       <Card />
-      <MainCard />
+      <Courses />
       <SortCard />
       <Team />
       <StudentOpinion />
