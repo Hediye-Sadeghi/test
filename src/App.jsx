@@ -16,7 +16,7 @@ function App() {
 
   let router = useRoutes(routes)
   return (
-    <div className="Container">
+    <div className="Container m-2">
       {router}
       <Head />
       <Card />
