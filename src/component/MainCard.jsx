@@ -1,8 +1,8 @@
 import React from "react";
-import Angular from "../assets/angular.png";
-import Js from "../assets/Js.png";
-import React1 from "../assets/React-js.png";
-import React2 from "../assets/react_native.png";
+import Angular from "../assets/images/angular.png";
+import Js from "../assets/images/Js.png";
+import React1 from "../assets/images/React-js.png";
+import React2 from "../assets/images/react_native.png";
 
 const products = [
   {
