@@ -1,8 +1,8 @@
 import React from "react";
-import Breadcrumb from "./../Breadcrumb/Breadcrumb";
-import CommentsTextArea from "./../CommentsTextArea/CommentsTextArea";
-import Footer from "./../Footer";
-import Navbar from "./../Navbar";
+import Breadcrumb from "../Breadcrumb/Breadcrumb";
+import CommentsTextArea from "../CommentsTextArea/CommentsTextArea";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 export default function ArticleInfo() {
   return (

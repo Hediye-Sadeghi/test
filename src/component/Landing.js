@@ -20,10 +20,10 @@ export default function Landing() {
         <Statistic />
 
         <div data-aos="fade-up" data-aos-anchor-placement="center-center">
-          <p className="text-center text-lg sm:text-3xl  pb-5 font-medium">
+          <p className="text-center text-xl  sm:text-3xl  pb-5 font-bold">
             در چه حوزه ای می خوای متخصص بشی ؟
           </p>
-          <p className="text-center pb-10">
+          <p className="text-center text-lg pb-10">
             {" "}
             بازار برای متخصص هاست و هیچ موقع بی کار نمی مونید
           </p>

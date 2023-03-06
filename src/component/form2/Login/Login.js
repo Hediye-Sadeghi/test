@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../../Navbar"
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -9,11 +10,11 @@ import {
   maxValidator,
   emailValidator,
 } from "./../../validators/rules";
-import "./Login.css";
 import Input from './../../FormDet/Input';
 import Button from './../../FormDet/Button';
 import { useForm } from './../../hooks/useForm';
 import AuthContext from './../../context/authContext';
+import Footer from "../../Footer"
 
 
 export default function Login() {
@@ -87,23 +88,23 @@ export default function Login() {
 
   return (
     <>
-
-      <section className="login-register">
-        <div className="login">
-          <span className="login__title">ورود به حساب کاربری</span>
-          <span className="login__subtitle">
+      <Navbar />
+      <section className="flex justify-center overflow-hidden relative">
+        <div className="flex flex-col items-center shadow-xl my-10 p-10 rounded-lg border-b-4 border-orange-500">
+          <span className="text-lg font-bold text-blue-900 pb-1">ورود به حساب کاربری</span>
+          <span className="text-md text-blue-700">
             خوشحالیم دوباره میبینیمت دوست عزیز :)
           </span>
-          <div className="login__new-member">
-            <span className="login__new-member-text">کاربر جدید هستید؟</span>
-            <Link className="login__new-member-link" to="/register">
+          <div className="flex justify-center bg-blue-50 p-3 rounded-lg my-4">
+            <span className="text-lg text-blue-500 leading-8">کاربر جدید هستید؟</span>
+            <Link className="bg-orange-300 py-1 px-2 text-lg rounded-lg mr-3 hover:bg-orange-200 " to="/register">
               ثبت نام
             </Link>
           </div> 
-          <form action="#" className="login-form">
-            <div className="login-form__username">
+          <form action="#" className="w-full">
+            <div className="relative">
               <Input
-                className="login-form__username-input"
+                className="w-full shadow-sm p-3 rounded-lg mb-4 focus:outline-none"
                 id="username"
                 type="text"
                 placeholder="نام کاربری یا آدرس ایمیل"
@@ -117,14 +118,14 @@ export default function Login() {
                 ]}
                 onInputHandler={onInputHandler}
               />
-              <i className="login-form__username-icon fa fa-user"></i>
+              <i className="absolute top-3 left-5 leading-8 text-gray-400 fa fa-user"></i>
             </div>
-            <div className="login-form__password">
+            <div className="relative">
               <Input
                 element="input"
                 id="password"
                 type="password"
-                className="login-form__password-input"
+                className="w-full shadow-sm p-3 rounded-lg mb-4 focus:outline-none"
                 placeholder="رمز عبور"
                 validations={[
                   requiredValidator(),
@@ -134,44 +135,44 @@ export default function Login() {
                 onInputHandler={onInputHandler}
               />
 
-              <i className="login-form__password-icon fa fa-lock-open"></i>
+              <i className="absolute top-3 left-5 leading-8 text-gray-400 fa fa-lock-open"></i>
             </div>
             <div className="login-form__password recaptcha-parent">
               <ReCAPTCHA sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" onChange={onChangeHandler} />
             </div>
             <Button
-              className={`login-form__btn ${
+              className={`flex items-center relative w-full p-3 rounded-lg bg-orange-500 ${
                 (formState.isFormValid && isGoogleRecaptchaVerify)
-                  ? "login-form__btn-success"
-                  : "login-form__btn-error"
+                  ? "bg-blue-500"
+                  : "bg-orange-500"
               }`}
               type="submit"
               onClick={userLogin}
               disabled={(!formState.isFormValid || !isGoogleRecaptchaVerify)}
             >
-              <i className="login-form__btn-icon fas fa-sign-out-alt"></i>
-              <span className="login-form__btn-text">ورود</span>
+              <i className="text-lg text-blue-900 pr-2 fas fa-sign-out-alt"></i>
+              <span className="mx-auto text-lg text-blue-900 font-bold">ورود</span>
             </Button>
-            <div className="login-form__password-setting">
-              <label className="login-form__password-remember">
+            <div className="flex justify-between mt-3">
+              <label className="flex items-center">
                 <input
-                  className="login-form__password-checkbox"
+                  className="ml-3"
                   type="checkbox"
                 />
-                <span className="login-form__password-text">
+                <span className="text-gray-500">
                   مرا به خاطر داشته باش
                 </span>
               </label>
-              <label className="login-form__password-forget">
-                <a className="login-form__password-forget-link" href="#">
+              <label className="text-gray-500">
+                <a  href="#">
                   رمز عبور را فراموش کرده اید؟
                 </a>
               </label>
             </div>
           </form>
-          <div className="login__des">
-            <span className="login__des-title">سلام کاربر محترم:</span>
-            <ul className="login__des-list">
+          <div className="w-full mt-3 text text-blue-900 ">
+            <span className="font-semibold leading-8">سلام کاربر محترم:</span>
+            <ul className="list-disc text-right leading-8">
               <li className="login__des-item">
                 لطفا از مرورگر های مطمئن و بروز مانند گوگل کروم و فایرفاکس
                 استفاده کنید.
@@ -186,6 +187,8 @@ export default function Login() {
           </div>
         </div>
       </section>
+
+      <Footer />
 
     </>
   );
