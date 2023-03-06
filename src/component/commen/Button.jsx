@@ -4,7 +4,7 @@ const Button = ({children}) => {
   return (
     <button
       type="submit"
-      className="group relative flex mx-auto justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      className="relative shadow-md flex justify-center rounded-lg border border-orange-500 bg-orange-500 p-2 font-semibold text-blue-900 hover:bg-orange-200 hover:border hover:border-orange-300 mx-4"
     >
       <span className="absolute inset-y-0 left-0 flex items-center pl-3"></span>
       {children}

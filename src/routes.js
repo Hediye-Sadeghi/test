@@ -1,42 +1,26 @@
 
+import Landing from './component/Landing';
+import CourseInfo from './component/course/CourseInfo';
+import Courses from './component/course/Courses';
+import ArticleInfo from './component/Articles/ArticleInfo';
+import Articles from './component/Articles/Articles';
+import TeacherInfos from './component/teacher/TeacherInfos';
+import Contact from './component/Contact/Contact';
+import AboutUs from './component/About/AboutUs';
+import Register from './component/form2/Register/Register';
+import Login from './component/form2/Login/Login';
 
-import CoursesPage from './component/CoursesPage';
-import MainCourse from './component/MainCourse';
-
-import News from './component/News';
-import MainNews from './component/MainNews';
-
-import About from './component/About';
-import Articles from './component/Articles';
-import MainArticle from './component/MainArticle';
-import Dashboard from './component/Dashboard';
-import SignIn from './component/SignIn';
-import Login from './component/Login';
-import Setting from './component/Setting';
-import Landing from './component/landing/Landing';
-
-
-let routes = [
-    { path: '/', element: <Landing/> },
-
-    { path: '/coursesPage', element: <CoursesPage /> },
-    { path: '/course/:courseID', element: <MainCourse /> },
-
-    { path: '/news', element: <News /> },
-    { path: '/news/:newsID', element: <MainNews /> },
-
-    { path: '/articles', element: <Articles /> }, 
-    { path: '/article/:articleID', element: <MainArticle /> },
-    
-
-    {
-        path: '/about/*', element: <About />, children: [
-            { path: "setting", element: <Setting/> },
-            { path: "dashboard", element: <Dashboard/> }
-        ]
-    },
+const routes = [ 
+    { path: '/', element: <Landing /> },
+    { path: '/about', element: <AboutUs /> },
+    { path: '/course-info/:courseName', element: <CourseInfo /> },
+    { path: '/courses/:page', element: <Courses /> },
+    { path: '/article-info/:articleName', element: <ArticleInfo /> },
+    { path: '/articles/:page', element: <Articles /> },
+    { path: '/teacher-info/:ID', element: <TeacherInfos /> },
     { path: '/login', element: <Login /> },
-    { path: '/register', element: <SignIn /> },
+    { path: '/register', element: <Register /> },
+    { path: '/contact', element: <Contact /> },
 
 ]
 
