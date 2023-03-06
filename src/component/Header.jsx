@@ -24,7 +24,7 @@ const Header = () => {
       </div>
       <div className="z-20 flex w-full text-right max-w-xl mx-auto md:px-0 lg:px-4 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-          <h2 className="mb-5 flex text-3xl font-bold tracking-wide text-blue-900 sm:text-4xl sm:leading-none">
+          <h2 className="mb-5 flex text-3xl leading-10 font-bold tracking-wide text-blue-900 sm:text-4xl">
              داستان برنامه نویس
             <br className="hidden md:block" />
             شدنت از اینجا شروع میشه ! {' '}
